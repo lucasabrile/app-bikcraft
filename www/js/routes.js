@@ -8,16 +8,17 @@ routes = [
     url: './pages/about.html',
   },
   {
-    path: '/catalog/',
-    componentUrl: './pages/catalog.html',
+    path: '/form/',
+    url: './pages/form.html',
+  },
+  // Left View Pages
+  {
+    path: '/left-page-1/',
+    url: './pages/left-page-1.html',
   },
   {
-    path: '/product/:id/',
-    componentUrl: './pages/product.html',
-  },
-  {
-    path: '/settings/',
-    url: './pages/settings.html',
+    path: '/left-page-2/',
+    url: './pages/left-page-2.html',
   },
   // Page Loaders & Router
   {

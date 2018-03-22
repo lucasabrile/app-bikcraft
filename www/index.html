@@ -11,62 +11,64 @@
       * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
           * Enable inline JS: add 'unsafe-inline' to default-src
   -->
-  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="theme-color" content="#2196f3">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
-  <title>My App</title>
+  <title>Rest</title>
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css"> -->
     <link rel="stylesheet" href="framework7/css/framework7.min.css">
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="pages/cadastro.html">
 </head>
 <body>
   <div id="app">
     <!-- Status bar overlay for fullscreen mode-->
     <div class="statusbar"></div>
     <!-- Left panel with reveal effect when hidden -->
-    <div class="panel panel-left panel-reveal">
+    <div class="panel panel-left panel-cover theme-dark">
       <div class="view view-left">
-        <div class="page">
-          <div class="navbar segmented color-theme-yellow">
+        <div class="page color-theme-red">
+          <div class="navbar">
             <div class="navbar-inner sliding">
               <div class="title">Menu</div>
             </div>
           </div>
           <div class="page-content">
-            <!-- <div class="block-title">Menu</div> -->
             <div class="list links-list">
               <ul>
-                <!-- <li><a href="/left-page-1/">Left Page 1</a></li>
-                <li><a href="/left-page-2/">Left Page 2</a></li>
-                <li><a href="/left-page-2/">Left Page 3</a></li> -->
+                <a href="#" class="login-screen-open" data-login-screen="#my-login-screen">Login</a>
+                <li><a href="/left-page-2/">Cardápio</a></li>
+                <li><a href="/left-page-2/">Sobre</a></li>
+                <li><a href="/page/">Contato</a></li>
+                <a href="/form/" data-view=".view-main" class="panel-close">cadastro</a>
               </ul>
             </div>
             <!-- <div class="block-title">Control Main View</div> -->
-            <div class="list links-list">
+            <!-- <div class="list links-list">
               <ul>
                 <li>
-                    <a href="#" class="login-screen-open" data-login-screen="#my-login-screen">Login</a>
+                  <a href="/about/" data-view=".view-main" class="panel-close">About</a>
                 </li>
                 <li>
-                  <a href="/form/" data-view=".view-main" class="panel-close">Contato</a>
+                  <a href="/form/" data-view=".view-main" class="panel-close">Form</a>
                 </li>
                 <li>
-                    <a href="#" class="popup-open" data-popup="#my-popup">Sobre</a>
+                  <a href="#" data-view=".view-main" class="back">Back in history</a>
                 </li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
     </div>
     <!-- Right panel with cover effect -->
-    <!-- <div class="panel panel-right panel-cover theme-dark">
+    <div class="panel panel-right panel-cover theme-dark">
       <div class="view">
         <div class="page">
           <div class="navbar">
@@ -79,14 +81,14 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- Your main view, should have "view-main" class -->
     <div class="view view-main ios-edges">
       <!-- Page, data-name contains page name which can be used in callbacks -->
       <div class="page" data-name="home">
         <!-- Top Navbar -->
-        <div class="navbar segmented color-theme-yellow">
+        <div class="navbar  page color-theme-red">
           <div class="navbar-inner">
             <div class="left">
               <a href="#" class="link icon-only panel-open" data-panel="left">
@@ -94,33 +96,34 @@
                 <i class="icon material-icons md-only">menu</i>
               </a>
             </div>
-            <div class="title sliding">Bikcraft</div>
+            <div class="title sliding">Rest</div>
             <div class="right">
-              <!-- <a href="#" class="link icon-only panel-open" data-panel="right"> -->
+              <a href="#" class="link icon-only panel-open" data-panel="right">
                 <i class="icon f7-icons ios-only">menu</i>
-                <!-- <i class="icon material-icons md-only">menu</i> -->
+                <i class="icon material-icons md-only">menu</i>
               </a>
             </div>
           </div>
         </div>
         <!-- Toolbar-->
-        <!-- <div class="toolbar">
+        <div class="toolbar segmented color-theme-black">
           <div class="toolbar-inner">
-            <a href="#" class="link">Left Link</a> 
-            <a href="#" class="link">Right Link</a>
+            Usuario não atenticado
+            <!-- <a href="#" class="link">Left Link</a>
+            <a href="#" class="link">Right Link</a> -->
           </div>
-        </div> -->
+        </div>
         <!-- Scrollable page content-->
-        <!-- <div class="page-content">
+        <div class="page-content">
           <div class="block block-strong">
             <p>This is an example of split view application layout, commonly used on tablets. The main approach of such kind of layout is that you can see different views at the same time.</p>
 
             <p>Each view may have different layout, different navbar type (dynamic, fixed or static) or without navbar.</p>
 
             <p>The fun thing is that you can easily control one view from another without any line of JavaScript just using "data-view" attribute on links.</p>
-          </div> -->
+          </div>
 
-          <!-- <div class="block-title">Navigation</div>
+          <div class="block-title">Navigation</div>
           <div class="list">
             <ul>
               <li>
@@ -129,8 +132,8 @@
                     <div class="item-title">About</div>
                   </div>
                 </a>
-              </li> -->
-              <!-- <li>
+              </li>
+              <li>
                 <a href="/form/" class="item-content item-link">
                   <div class="item-inner">
                     <div class="item-title">Form</div>
@@ -138,16 +141,15 @@
                 </a>
               </li>
             </ul>
-          </div> -->
+          </div>
 
           <div class="block-title">Modals</div>
           <div class="block block-strong">
             <div class="row">
               <div class="col-50">
-                <a href="#" class="button button-raised button-fill popup-open" data-popup="#my-popup">Sobre</a>
+                <a href="#" class="button button-raised button-fill popup-open" data-popup="#my-popup">Popup</a>
               </div>
               <div class="col-50">
-                <a href="#" class="button button-raised button-fill login-screen-open" data-login-screen="#my-login-screen">Login Screen</a>
               </div>
             </div>
           </div>
@@ -156,10 +158,10 @@
           <div class="block block-strong">
             <div class="row">
               <div class="col-50">
-                <a href="#" class="button button-raised button-fill panel-open" data-panel="left">Left Panel</a>
+                <!-- <a href="#" class="button button-raised button-fill panel-open" data-panel="left">Left Panel</a> -->
               </div>
               <div class="col-50">
-                <a href="#" class="button button-raised button-fill panel-open" data-panel="right">Right Panel</a>
+                <!-- <a href="#" class="button button-raised button-fill panel-open" data-panel="right">Right Panel</a> -->
               </div>
             </div>
           </div>
@@ -207,7 +209,7 @@
     </div>
 
     <!-- Login Screen -->
-    <div class="login-screen" id="my-login-screen">
+    <div class="login-screen panel-cover theme-dark" id="my-login-screen">
       <div class="view">
         <div class="page">
           <div class="page-content login-screen-content">
@@ -216,17 +218,17 @@
               <ul>
                 <li class="item-content item-input">
                   <div class="item-inner">
-                    <div class="item-title item-label">Username</div>
+                    <div class="item-title item-label">Usuário</div>
                     <div class="item-input-wrap">
-                      <input type="text" name="username" placeholder="Your username">
+                      <input type="Email" name="username" placeholder="Nome de usuário">
                     </div>
                   </div>
                 </li>
                 <li class="item-content item-input">
                   <div class="item-inner">
-                    <div class="item-title item-label">Password</div>
+                    <div class="item-title item-label">Senha</div>
                     <div class="item-input-wrap">
-                      <input type="password" name="password" placeholder="Your password">
+                      <input type="Password" name="password" placeholder="Senha">
                     </div>
                   </div>
                 </li>
@@ -235,10 +237,11 @@
             <div class="list">
               <ul>
                 <li>
-                  <a href="#" class="item-link list-button login-button">Sign In</a>
+                  <a href="#" class="item-link list-button login-button SignUp">Sign Up</a>
+                  <a href="#" class="item-link list-button login-button SignIn">Sign In</a>
+                  <a href="#" class="item-link list-button login-screen-close SignOut">Sign Out</a>
                 </li>
               </ul>
-              <div class="block-footer">Some text about login information.<br>Click "Sign In" to close Login Screen</div>
             </div>
           </div>
         </div>
@@ -255,8 +258,8 @@
 
   <!-- App routes -->
   <script src="js/routes.js"></script>
-
-  <!-- Your custom app scripts -->
+  <script src="js/firebase.js"></script>
+  <script src="js/firebaseapp.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
